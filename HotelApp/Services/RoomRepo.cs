@@ -27,12 +27,7 @@ namespace HotelApp.Services
         }
 
         
-        //public Room GetRoomByNumber(string roomNumber)
-        //{
-        //    return _roomContext.Rooms.FirstOrDefault(x => x.Number == roomNumber);
-        //}
-
-
+        
         public Room PostRoom(Room room)
         {
             var hotel = _roomContext.Hotels.Find(room.Hotel.HotelId);

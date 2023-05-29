@@ -11,10 +11,7 @@ namespace HotelApp.Services
     {
         private readonly HotelContext _hotelContext;
 
-        //public HotelRepo(HotelContext context)
-        //{
-        //    _hotelContext = context ?? throw new ArgumentNullException(nameof(context));
-        //}
+        
 
         public HotelRepo(HotelContext context)
         {

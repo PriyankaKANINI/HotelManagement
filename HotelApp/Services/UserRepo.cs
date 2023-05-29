@@ -84,10 +84,7 @@ namespace HotelApp.Services
             {
                 throw new Exception("An error occurred while filtering hotels based on price range.", ex);
             }
-        }
-
-        //Check room availability
-       
+        }     
 
 
 

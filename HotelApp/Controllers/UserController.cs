@@ -29,9 +29,9 @@ namespace HotelApp.Controllers
         }
 
         [HttpGet("{id}")]
-        public User GetById(int UserId)
+        public User GetById(int Id)
         {
-            return us.GetUserById(UserId);
+            return us.GetUserById(Id);
         }
 
         [HttpPost]
@@ -40,19 +40,19 @@ namespace HotelApp.Controllers
             return us.PostUser(user);
         }
         [HttpPut("{id}")]
-        public User PutCustomer(int UserId, User user)
+        public User PutCustomer(int Id, User user)
         {
-            return us.PutUser(UserId, user);
+            return us.PutUser(Id, user);
         }
         [HttpDelete("{id}")]
-        public User DeleteCustomer(int UserId)
+        public User DeleteCustomer(int Id)
         {
-            return us.DeleteUser(UserId);
+            return us.DeleteUser(Id);
         }
-        [HttpGet("filter")]
-        public IEnumerable<Hotel> FilterHotels(string location)
+        [HttpGet("filter/amenities")]
+        public IEnumerable<Hotel> FilterHotels(string HotelAmenities)
         {
-            return us.FilterHotels(location);
+            return us.FilterHotels(HotelAmenities);
         }
 
         [HttpGet("filter/price")]
@@ -61,9 +61,9 @@ namespace HotelApp.Controllers
             return us.FilterPriceRange(minPrice, maxPrice);
         }
         [HttpGet("filter/location")]
-        public IEnumerable<Hotel> FilterLocation(string location)
+        public IEnumerable<Hotel> FilterLocation(string Location)
         {
-            return us.FilterLocation(location);
+            return us.FilterLocation(Location);
         }
     }
 }
